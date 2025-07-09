@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamless Health - Appointment Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --light: #f8fafc;
+            --dark: #1e293b;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f1f5f9;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .doctor-card img {
+            transition: transform 0.3s ease;
+        }
+        
+        .doctor-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .booking-form {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4f1dd710-6780-4fbf-937c-4f0f92431ab6.png" alt="Seamless Health logo - abstract medical cross with blue gradient" class="h-8 w-8">
+                        <span class="ml-2 text-xl font-semibold text-gray-900">Seamless Health</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Doctors</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700">Book Appointment</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                    Seamless Healthcare Appointments
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl">
+                    Book doctor visits with ease - anytime, anywhere. Our platform connects you with healthcare professionals in minutes.
+                </p>
+                <div class="mt-10">
+                    <a href="#book-now" class="bg-white text-blue-600 px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Features</h2>
+                <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    Streamlined Healthcare Experience
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="card-hover bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">24/7 Availability</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Book appointments anytime, day or night. Our platform is always available to serve your needs.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="card-hover bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Verified Professionals</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            All healthcare providers are thoroughly vetted and licensed to ensure quality care.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="card-hover bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Secure Payments</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            Our encrypted payment system ensures your financial information is always protected.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctors Section -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Our Specialists</h2>
+                <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    Meet Our Healthcare Providers
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Experienced professionals dedicated to your health and wellness.
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Doctor 1 -->
+                <div class="doctor-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8e6c4df7-8dd7-47a9-b143-6f0b7cfe55be.png" alt="Dr. Sarah Johnson - Cardiologist with blonde hair and white coat in modern clinic setting" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Dr. Sarah Johnson</h3>
+                        <p class="text-blue-600">Cardiologist</p>
+                        <p class="mt-4 text-gray-500">
+                            Specializing in preventive cardiology and heart disease management.
+                        </p>
+                        <div class="mt-6">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 w-full">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doctor 2 -->
+                <div class="doctor-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c03c4367-9d87-492f-b550-69902ecef608.png" alt="Dr. Michael Chen - Pediatrician smiling with stethoscope around neck in colorful office" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Dr. Michael Chen</h3>
+                        <p class="text-blue-600">Pediatrician</p>
+                        <p class="mt-4 text-gray-500">
+                            Expert in child development and preventive pediatric healthcare.
+                        </p>
+                        <div class="mt-6">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 w-full">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Doctor 3 -->
+                <div class="doctor-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/10458fad-3831-487f-bf4d-af6305df210e.png" alt="Dr. Amina Patel - Neurologist with dark hair examining brain scan in high-tech lab" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">Dr. Amina Patel</h3>
+                        <p class="text-blue-600">Neurologist</p>
+                        <p class="mt-4 text-gray-500">
+                            Specializes in neurological disorders and innovative treatment approaches.
+                        </p>
+                        <div class="mt-6">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 w-full">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Form Section -->
+    <div id="book-now" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Book Now</h2>
+                <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    Schedule Your Appointment
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Fill out the form below and we'll confirm your booking shortly.
+                </p>
+            </div>
+
+            <div class="mt-10 max-w-lg mx-auto booking-form bg-gray-50 p-8 rounded-lg">
+                <form id="appointment-form">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <div class="mt-1">
+                                <input type="text" id="full-name" name="full-name" required class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <div class="mt-1">
+                                <input type="email" id="email" name="email" required class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                            <div class="mt-1">
+                                <input type="tel" id="phone" name="phone" required class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="specialty" class="block text-sm font-medium text-gray-700">Specialty Needed</label>
+                            <div class="mt-1">
+                                <select id="specialty" name="specialty" required class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+                                    <option value="">Select a specialty</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="pediatrics">Pediatrics</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="dermatology">Dermatology</option>
+                                    <option value="orthopedics">Orthopedics</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="date" class="block text-sm font-medium text-gray-700">Preferred Date</label>
+                            <div class="mt-1">
+                                <input type="date" id="date" name="date" required class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="notes" class="block text-sm font-medium text-gray-700">Additional Notes</label>
+                            <div class="mt-1">
+                                <textarea id="notes" name="notes" rows="3" class="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"></textarea>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Testimonials</h2>
+                <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    What Our Patients Say
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="card-hover bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ff54792-e47b-4439-aa8e-bfaa892ca4ac.png" alt="Lisa Thompson - satisfied patient profile picture" class="h-12 w-12 rounded-full">
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Lisa Thompson</h3>
+                            <p class="text-gray-500">Patient</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "Booking appointments has never been easier. The reminder system is fantastic and has helped me never miss an appointment."
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="card-hover bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b38a3a02-a880-4baa-951b-f38435b834f5.png" alt="James Rodriguez - elderly patient smiling warmly" class="h-12 w-12 rounded-full">
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">James Rodriguez</h3>
+                            <p class="text-gray-500">Patient</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "As someone who isn't tech-savvy, this platform made it simple to schedule my cardiology appointment. Great service!"
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="card-hover bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a7822142-92c2-4d3c-8f33-2e972c5ddd21.png" alt="Priya Sharma - young mother with baby in arms" class="h-12 w-12 rounded-full">
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">Priya Sharma</h3>
+                            <p class="text-gray-500">Patient</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic">
+                            "Finding good pediatricians was so stressful before this service. Now I can book same-day visits when my child gets sick."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">FAQs</h2>
+                <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                    Frequently Asked Questions
+                </p>
+            </div>
+
+            <div class="mt-10 max-w-3xl mx-auto">
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-lg font-medium text-gray-900">How do I book an appointment?</h3>
+                        <div class="mt-2">
+                            <p class="text-gray-600">
+                                Simply fill out the booking form above with your details, preferred doctor/specialty, and availability. We'll confirm your appointment via email within 24 hours.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-lg font-medium text-gray-900">Can I cancel or reschedule an appointment?</h3>
+                        <div class="mt-2">
+                            <p class="text-gray-600">
+                                Yes, you can cancel or reschedule up to 24 hours before your appointment time. Instructions will be included in your confirmation email.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-lg font-medium text-gray-900">Is telemedicine available?</h3>
+                        <div class="mt-2">
+                            <p class="text-gray-600">
+                                Many of our healthcare providers offer telemedicine consultations. Please indicate your preference when booking or contact us directly.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-lg font-medium text-gray-900">How do I pay for my appointment?</h3>
+                        <div class="mt-2">
+                            <p class="text-gray-600">
+                                Payments are processed securely through our platform after your appointment. We accept all major credit cards and some insurance plans.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">Primary Care</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Specialists</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Urgent Care</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Telemedicine</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Health Tips</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Insurance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Press</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-300">Subscribe to our newsletter</p>
+                        <div class="mt-2 flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md bg-gray-700 text-white focus:outline-none">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-gray-400 text-sm text-center">© 2023 Seamless Health. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('appointment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            
+            // In a real app, you would send this data to your backend
+            alert(`Thank you, ${name}! Your appointment request has been received. We'll send confirmation details to ${email} shortly.`);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Mobile menu toggle functionality would go here
+        // (implementation omitted for brevity, but would be included in production)
+    </script>
+</body>
+</html>
+
